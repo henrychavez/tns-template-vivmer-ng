@@ -1,0 +1,77 @@
+{
+  "name": "tns-template-vivmer-ng",
+  "displayName": "NativeScript Angular Template - VIVMER Architecture",
+  "version": "1.0.0",
+  "nativescript": {
+    "id": "org.nativescript.vivmer",
+    "templateVersion": "v2",
+    "tns-android": {
+      "version": "6.1.0"
+    },
+    "tns-ios": {
+      "version": "6.1.0"
+    }
+  },
+  "author": {
+    "name": "Henry Chavez",
+    "email": "henry19.chavez@gmail.com",
+    "url": "https://github.com/henrychavez"
+  },
+  "description": "NativeScript Angular VIVMER Template",
+  "license": "Apache-2.0",
+  "keywords": [
+    "telerik",
+    "mobile",
+    "angular",
+    "nativescript",
+    "{N}",
+    "tns",
+    "appbuilder",
+    "template",
+    "vivmer"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/henrychavez/tns-template-vivmer-ng"
+  },
+  "bugs": {
+    "url": "https://github.com/henrychavez/tns-template-vivmer-ng/issues"
+  },
+  "homepage": "https://github.com/henrychavez/tns-template-vivmer-ng",
+  "dependencies": {
+    "@angular/animations": "~8.2.0",
+    "@angular/common": "~8.2.0",
+    "@angular/compiler": "~8.2.0",
+    "@angular/core": "~8.2.0",
+    "@angular/forms": "~8.2.0",
+    "@angular/platform-browser": "~8.2.0",
+    "@angular/platform-browser-dynamic": "~8.2.0",
+    "@angular/router": "~8.2.0",
+    "@ngxs-labs/emitter": "~2.0.0",
+    "@ngxs/store": "~3.5.0",
+    "nativescript-angular": "~8.2.0",
+    "nativescript-localstorage": "^2.0.1",
+    "nativescript-theme-core": "~1.0.6",
+    "reflect-metadata": "~0.1.12",
+    "rxjs": "~6.5.0",
+    "tns-core-modules": "~6.1.0",
+    "zone.js": "~0.9.1"
+  },
+  "devDependencies": {
+    "@angular/compiler-cli": "~8.2.0",
+    "@commitlint/cli": "~8.1.0",
+    "@commitlint/config-conventional": "~8.1.0",
+    "@ngtools/webpack": "~8.2.0",
+    "codelyzer": "~5.1.0",
+    "husky": "~3.0.5",
+    "nativescript-dev-webpack": "~1.2.0",
+    "node-sass": "~4.12.0",
+    "prettier": "^1.18.2",
+    "prettier-tslint": "^0.4.2",
+    "pretty-quick": "^1.11.1",
+    "tslint": "^5.20.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "~3.5.3"
+  }
+}

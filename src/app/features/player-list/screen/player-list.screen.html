@@ -1,0 +1,13 @@
+<ActionBar title="Player List" class="action-bar"> </ActionBar>
+
+<GridLayout class="page">
+  <ListView
+    [items]="players$ | async"
+    (itemTap)="goToPlayerDetail.emit($event.index)"
+    class="list-group"
+  >
+    <ng-template let-item="item">
+      <label [text]="item.name" class="list-group-item"></label>
+    </ng-template>
+  </ListView>
+</GridLayout>

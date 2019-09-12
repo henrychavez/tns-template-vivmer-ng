@@ -1,0 +1,17 @@
+<ActionBar title="Player Details" class="action-bar"></ActionBar>
+<GridLayout class="page">
+  <StackLayout *ngIf="player$ | async">
+    <FlexboxLayout class="m-15">
+      <label class="h2" [text]="(player$ | async).id + '. '"></label>
+      <label class="h2" [text]="(player$ | async).name"></label>
+    </FlexboxLayout>
+    <label class="h4" [text]="(player$ | async).role"></label>
+  </StackLayout>
+  <ActivityIndicator
+    width="100"
+    height="100"
+    *ngIf="isLoading$ | async"
+    [busy]="true"
+    class="activity-indicator"
+  ></ActivityIndicator>
+</GridLayout>

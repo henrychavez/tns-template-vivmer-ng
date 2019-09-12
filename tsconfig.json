@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noEmitHelpers": true,
+    "noEmitOnError": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "lib": ["es6", "dom", "es2015.iterable"],
+    "baseUrl": ".",
+    "paths": {
+      "@app/core/*": ["./src/app/core/*"],
+      "@app/features/*": ["./src/app/features/*"],
+      "@app/shared/*": ["./src/app/shared/*"],
+      "*": ["./node_modules/*"]
+    }
+  },
+  "exclude": ["node_modules", "platforms"]
+}

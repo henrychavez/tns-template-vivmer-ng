@@ -1,0 +1,19 @@
+/*
+    Import the theme's variables. If you're using a color scheme
+    other than "light", switch the path to the alternative scheme,
+    for example '~nativescript-theme-core/scss/dark'.
+*/
+@import '~nativescript-theme-core/scss/light';
+
+/* Custom colors */
+$blue-dark: #022734 !default;
+$blue-light: #02556e !default;
+$blue-50: rgba($blue-dark, 0.5) !default;
+
+/**
+* Theme variables overrides
+**/
+
+/*  Colors */
+$background: #fff;
+$primary: lighten(#000, 13%);
