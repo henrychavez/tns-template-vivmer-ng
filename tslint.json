@@ -1,6 +1,3 @@
 {
-  "extends": "@bytpher/tslint-ns-angular",
-  "rules": {
-    "comment-format": [true, "check-space"]
-  }
+  "extends": "@bytpher/tslint-ns-angular"
 }
