@@ -1,53 +1,40 @@
 import { Player } from '@app/shared/models';
 
-import { Injector, NgZone } from '@angular/core';
+import { Injector } from '@angular/core';
 import { EmitterAction, Receiver } from '@ngxs-labs/emitter';
-import { Selector, State, StateContext } from '@ngxs/store';
-
-import { RouterExtensions } from 'nativescript-angular/router';
+import { State, StateContext } from '@ngxs/store';
 
 import { tap } from 'rxjs/operators';
 
 import { PlayerDetailInteractor } from '../interactor/player-detail.interactor';
 
-type ViewModel = {
+type VM = {
   isLoading: boolean;
   player?: Player;
 };
 
-@State<ViewModel>({
+@State<VM>({
   name: 'playerDetail',
   defaults: {
     isLoading: false,
   },
 })
-export class PlayerDetailVM {
+export class PlayerDetailVM implements VM {
   private static interactor: PlayerDetailInteractor;
-  private static router: RouterExtensions;
-  private static zone: NgZone;
+
+  isLoading: boolean;
+  player?: Player;
 
   constructor(injector: Injector) {
     PlayerDetailVM.interactor = injector.get(PlayerDetailInteractor);
-    PlayerDetailVM.router = injector.get(RouterExtensions);
-    PlayerDetailVM.zone = injector.get(NgZone);
-  }
-
-  @Selector()
-  static isLoading(vm: ViewModel) {
-    return vm.isLoading;
-  }
-
-  @Selector()
-  static player(vm: ViewModel) {
-    return vm.player;
   }
 
   @Receiver()
-  static loadPlayer(ctx: StateContext<ViewModel>, action: EmitterAction<number>) {
+  static loadPlayer(ctx: StateContext<VM>, action: EmitterAction<number>) {
     ctx.patchState({ isLoading: true });
 
     return PlayerDetailVM.interactor
       .fetchPlayer(action.payload)
-      .pipe(tap(player => ctx.patchState({ player, isLoading: false })));
+      .pipe(tap((player) => ctx.patchState({ player, isLoading: false })));
   }
 }

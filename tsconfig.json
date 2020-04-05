@@ -17,5 +17,8 @@
       "*": ["./node_modules/*"]
     }
   },
+  "angularCompilerOptions": {
+    "disableTypeScriptVersionCheck": true
+  },
   "exclude": ["node_modules", "platforms"]
 }
