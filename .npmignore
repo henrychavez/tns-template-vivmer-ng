@@ -4,6 +4,7 @@ npm-debug.log
 *.js.map
 *.js
 hooks/*
+!hooks/after-createProject/after-createProject.js
 lib/
 node_modules/
 platforms/
@@ -13,3 +14,5 @@ typings/
 .cloud
 .project
 .npmrc
+
+tools/assets/

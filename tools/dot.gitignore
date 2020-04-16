@@ -1,6 +1,5 @@
 # NativeScript
 hooks/
-!hooks/after-createProject/after-createProject.js
 node_modules/
 platforms/
 
