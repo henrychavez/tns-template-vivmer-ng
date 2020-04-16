@@ -1,0 +1,12 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "recommendations": [
+    "telerik.nativescript",
+    "kisstkondoros.vscode-codemetrics",
+    "k--kato.intellij-idea-keybindings",
+    "xabikos.javascriptsnippets",
+    "sburg.vscode-javascript-booster",
+    "esbenp.prettier-vscode",
+    "ms-vscode.vscode-typescript-tslint-plugin"
+  ]
+}
