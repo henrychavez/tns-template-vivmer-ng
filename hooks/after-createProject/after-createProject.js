@@ -4,15 +4,10 @@ const path = require("path");
 module.exports = function (hookArgs) {
     const appRootFolder = hookArgs.projectDir;
     const toolsDir = path.join(appRootFolder, "tools");
-    const vscodeDir = path.join(appRootFolder, ".vscode");
     const srcGitignore = path.join(toolsDir, "dot.gitignore");
     const destGitignore = path.join(appRootFolder, ".gitignore");
-    const srcVscodeSettings = path.join(toolsDir, "vscode.settings.json");
-    const destVscodeSettings = path.join(vscodeDir, "settings.json");
 
     try {
-        fs.mkdirSync(vscodeDir);
-        fs.copyFileSync(srcVscodeSettings, destVscodeSettings);
         fs.copyFileSync(srcGitignore, destGitignore);
     } catch (error) {
         console.log(error);
